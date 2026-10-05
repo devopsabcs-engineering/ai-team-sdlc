@@ -4,6 +4,8 @@
 
 > **▶ [View the live executive presentation](https://devopsabcs-engineering.github.io/ai-team-sdlc/demo/ai-sdlc-lifecycle.html)** — an interactive, animated walkthrough of the whole agentic lifecycle (published via GitHub Pages). Prefer a static view? See the [high-resolution poster](docs/demo/ai-sdlc-lifecycle-poster.png).
 
+> **See it ship a real app:** [Focus Garden](https://devopsabcs-engineering.github.io/ai-team-sdlc-sample-focus-garden/) was built from one brief with this plugin, from ideation to a governed production release. The [wiki](https://github.com/devopsabcs-engineering/ai-team-sdlc-sample-focus-garden/wiki) has the full evidence with screenshots, and the [bilingual labs](https://devopsabcs-engineering.github.io/ai-sdlc-labs/) teach the lifecycle step by step.
+
 A reusable, spec-agnostic **agentic SDLC**, packaged as a **GitHub Copilot plugin**: a master
 orchestrator turns any product idea or spec into shipped software by decomposing the work into
 verifiable tasks, dispatching each to the right specialist AI agent, enforcing quality gates,
