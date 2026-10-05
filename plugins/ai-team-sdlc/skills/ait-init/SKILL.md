@@ -41,7 +41,8 @@ Perform each step idempotently — detect existing state and merge rather than o
    `copilot plugin marketplace add devopsabcs-engineering/ai-team-sdlc` and
    `copilot plugin install ai-team-sdlc@ai-team-sdlc`. Do not attempt network installs silently.
 2. **Enable the plugin declaratively.** Create or merge `.github/copilot/settings.json` so the
-   `enabledPlugins` array contains `"ai-team-sdlc@ai-team-sdlc"` (preserve any existing entries and
+   `enabledPlugins` object has the key `"ai-team-sdlc@ai-team-sdlc"` set to `true`, and
+   `extraKnownMarketplaces` registers the marketplace repository (preserve any existing entries and
    other keys). See the template below.
 3. **Seed a thin `AGENTS.md` pointer** — only if `AGENTS.md` does not already exist. It must be a
    short pointer to the `ait-conventions` skill, not a copy of the contract. If `AGENTS.md` exists,
@@ -51,13 +52,28 @@ Perform each step idempotently — detect existing state and merge rather than o
    never committed.
 5. **Report** what was wired and the exact next command to start work
    (`/product-run` or "Use the ait-sdlc-orchestrate skill").
+6. **(Optional) Snapshot a finished run.** `.copilot-tracking/` is git-ignored, so the evidence of a
+   run is not committed. After a run reaches `DONE`, copy `state.json`, `plan.md`, `tasks.md`,
+   `changes.md`, and `decisions.md` from `.copilot-tracking/<run-id>/` to `docs/run/<run-id>/` in
+   the consumer repository and commit that folder. Skip `inbox/`. Do this only when the user asks for
+   reviewable run evidence.
 
 ## Templates
 
 `.github/copilot/settings.json` (merge, don't replace):
 ```json
 {
-  "enabledPlugins": ["ai-team-sdlc@ai-team-sdlc"]
+  "extraKnownMarketplaces": {
+    "ai-team-sdlc": {
+      "source": {
+        "source": "github",
+        "repo": "devopsabcs-engineering/ai-team-sdlc"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "ai-team-sdlc@ai-team-sdlc": true
+  }
 }
 ```
 

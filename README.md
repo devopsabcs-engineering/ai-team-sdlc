@@ -97,8 +97,11 @@ task schema, gates, resumability, sign-off) and **`ait-quality-gates`** (the reu
 | `/product-deploy` | `ait-deploy` | DevOps |
 | `/product-run` | `ait-sdlc-orchestrate` | Orchestrator + Scribe |
 
-The `/product-*` commands are VS Code Copilot slash-command wrappers. In the Copilot CLI, invoke
-the underlying `ait-*` skill directly (below).
+The `/product-*` commands are VS Code workspace prompt files (`plugins/ai-team-sdlc/prompts/`). The
+GitHub Copilot plugin docs do not list prompt files as a plugin component, so a marketplace install
+delivers the agents and skills but is not confirmed to deliver these commands. Where they are
+missing, invoke the matching `ait-*` skill: in the Copilot CLI use `/ait-product-design` (skills are
+slash-invocable) or `copilot -p "Use the ait-product-design skill ..."`.
 
 ## Building prototypes
 
@@ -189,7 +192,14 @@ Enable the plugin once — from the plugin manager (add marketplace `devopsabcs-
 install), or declaratively in `.github/copilot/settings.json`:
 
 ```json
-{ "enabledPlugins": ["ai-team-sdlc@ai-team-sdlc"] }
+{
+  "extraKnownMarketplaces": {
+    "ai-team-sdlc": {
+      "source": { "source": "github", "repo": "devopsabcs-engineering/ai-team-sdlc" }
+    }
+  },
+  "enabledPlugins": { "ai-team-sdlc@ai-team-sdlc": true }
+}
 ```
 
 Then just describe the goal in a session — skills activate by description, no slash command needed:

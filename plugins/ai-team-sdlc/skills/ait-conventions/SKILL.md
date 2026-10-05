@@ -57,6 +57,7 @@ idea → design/ideation (ait-product-designer) → prototype (ait-product-desig
 
 `.copilot-tracking/` is runtime state and should be git‑ignored by consuming projects.
 When `plan.md`/`tasks.md` disagree with `state.json`, `state.json` wins.
+To keep reviewable evidence of a finished run, snapshot its files to `docs/run/<run-id>/` (see `ait-init`).
 
 ### Task schema (`tasks.md`, projected from `state.json`)
 `| id | title | owner | phase | deps | acceptance | requiredGates | gateResults | status |`

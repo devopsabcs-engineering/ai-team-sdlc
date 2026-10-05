@@ -35,6 +35,10 @@ with the `ait-conventions` skill as the shared contract.
 Commands are thin routers. The durable procedure lives in the skill; shared rules come from
 the `ait-conventions` skill (and `AGENTS.md`, when present).
 
+The `/product-*` commands are VS Code workspace prompt files, not a documented plugin component.
+If they do not appear after a plugin install, invoke the matching skill instead (for example
+`/ait-product-design` in the Copilot CLI).
+
 ## Running in Copilot CLI
 
 Install the plugin, then invoke a full run or a single phase:
