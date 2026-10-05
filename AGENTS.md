@@ -71,7 +71,7 @@ Skills and this file are portable to the CLI. Run one of:
 - `copilot -p "Use the ait-product-design skill to shape UX flows for the feature in ./specs/checkout.md"`
 - `copilot -p "Use the ait-product-prototype skill to build and verify a clickable prototype from ./specs/checkout.md"`
 
-Install the team as a Copilot plugin — `copilot plugin marketplace add CalinL/ai-team-sdlc` then
+Install the team as a Copilot plugin — `copilot plugin marketplace add devopsabcs-engineering/ai-team-sdlc` then
 `copilot plugin install ai-team-sdlc@ai-team-sdlc` — and its skills and agents become available in
 any repo. The plugin's skills reference the `ait-conventions` skill for the shared contract, so the
 system works with no repo-level instructions file. This `AGENTS.md` is auto‑read by the CLI as

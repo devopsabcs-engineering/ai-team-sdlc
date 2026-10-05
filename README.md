@@ -2,7 +2,7 @@
 
 ![From idea to production, delivered by an agentic team](docs/demo/ai-team-idea-to-prod.png)
 
-> **▶ [View the live executive presentation](https://calinl.github.io/ai-team-sdlc/demo/ai-sdlc-lifecycle.html)** — an interactive, animated walkthrough of the whole agentic lifecycle (published via GitHub Pages). Prefer a static view? See the [high-resolution poster](docs/demo/ai-sdlc-lifecycle-poster.png).
+> **▶ [View the live executive presentation](https://devopsabcs-engineering.github.io/ai-team-sdlc/demo/ai-sdlc-lifecycle.html)** — an interactive, animated walkthrough of the whole agentic lifecycle (published via GitHub Pages). Prefer a static view? See the [high-resolution poster](docs/demo/ai-sdlc-lifecycle-poster.png).
 
 A reusable, spec-agnostic **agentic SDLC**, packaged as a **GitHub Copilot plugin**: a master
 orchestrator turns any product idea or spec into shipped software by decomposing the work into
@@ -31,7 +31,7 @@ mandatory human governance sign-off before deploy.
 Install from the marketplace, then enable the plugin:
 
 ```bash
-copilot plugin marketplace add CalinL/ai-team-sdlc
+copilot plugin marketplace add devopsabcs-engineering/ai-team-sdlc
 copilot plugin install ai-team-sdlc@ai-team-sdlc
 ```
 
@@ -144,7 +144,7 @@ The same `ait-*` skills and agents power all three surfaces — only the invocat
 
 ```bash
 # One-time: install the plugin
-copilot plugin marketplace add CalinL/ai-team-sdlc
+copilot plugin marketplace add devopsabcs-engineering/ai-team-sdlc
 copilot plugin install ai-team-sdlc@ai-team-sdlc
 
 # Full lifecycle from a spec (folder, file, or pasted idea)
@@ -185,7 +185,7 @@ Or open the agent picker and choose a persona directly (e.g. **ait-sdlc-orchestr
 
 ### Copilot app / coding agent
 
-Enable the plugin once — from the plugin manager (add marketplace `CalinL/ai-team-sdlc`, then
+Enable the plugin once — from the plugin manager (add marketplace `devopsabcs-engineering/ai-team-sdlc`, then
 install), or declaratively in `.github/copilot/settings.json`:
 
 ```json
@@ -204,7 +204,7 @@ Prototype the onboarding screen, then review it for accessibility issues.
 `docs/demo/ai-sdlc-lifecycle.html` is a self-contained, animated executive walkthrough of the
 agentic lifecycle. It is published to **GitHub Pages** and linked at the top of this README:
 
-- Live: <https://calinl.github.io/ai-team-sdlc/demo/ai-sdlc-lifecycle.html>
+- Live: <https://devopsabcs-engineering.github.io/ai-team-sdlc/demo/ai-sdlc-lifecycle.html>
 - Static poster: [`docs/demo/ai-sdlc-lifecycle-poster.png`](docs/demo/ai-sdlc-lifecycle-poster.png)
 
 > The workflow (`.github/workflows/deploy-pages.yml`) auto-enables GitHub Pages (`enablement: true`)

@@ -31,14 +31,14 @@ Follow the `ait-conventions` skill for the shared contract this team operates un
 | Input | Required | Notes |
 |-------|----------|-------|
 | repo root | yes | The workspace to bootstrap (default: current working directory). |
-| marketplace ref | no | Defaults to `CalinL/ai-team-sdlc`. |
+| marketplace ref | no | Defaults to `devopsabcs-engineering/ai-team-sdlc`. |
 | overwrite AGENTS.md | no | Default **no**; never clobber an existing `AGENTS.md` without explicit consent. |
 
 ## Procedure
 Perform each step idempotently — detect existing state and merge rather than overwrite.
 
 1. **Confirm the plugin is available.** If the marketplace is not registered, tell the user to run
-   `copilot plugin marketplace add CalinL/ai-team-sdlc` and
+   `copilot plugin marketplace add devopsabcs-engineering/ai-team-sdlc` and
    `copilot plugin install ai-team-sdlc@ai-team-sdlc`. Do not attempt network installs silently.
 2. **Enable the plugin declaratively.** Create or merge `.github/copilot/settings.json` so the
    `enabledPlugins` array contains `"ai-team-sdlc@ai-team-sdlc"` (preserve any existing entries and

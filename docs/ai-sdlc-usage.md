@@ -40,7 +40,7 @@ the `ait-conventions` skill (and `AGENTS.md`, when present).
 Install the plugin, then invoke a full run or a single phase:
 
 ```powershell
-copilot plugin marketplace add CalinL/ai-team-sdlc
+copilot plugin marketplace add devopsabcs-engineering/ai-team-sdlc
 copilot plugin install ai-team-sdlc@ai-team-sdlc
 
 # already installed? pull the latest agents, skills, and prompts

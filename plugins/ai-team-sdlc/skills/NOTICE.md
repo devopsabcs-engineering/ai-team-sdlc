@@ -13,6 +13,7 @@ and are redistributed under the **Apache License 2.0**. Each vendored skill keep
 | `ait-prototype-testing` | `webapp-testing` | `document-skills/skills/webapp-testing` | Apache-2.0 | Repurposed: rewritten to use the Playwright MCP instead of bundled Python Playwright scripts, and re-scoped to design-phase prototype verification. Retains the upstream `LICENSE.txt` for attribution. |
 
 The remaining skills in this directory are original to the AI-SDLC system and licensed **MIT**.
+ai-team-sdlc was originally created by Calin Lupas.
 
 Apache-2.0 requires preserving copyright/license notices and stating changes; the table above
 documents the changes made to each vendored skill.
